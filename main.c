@@ -6,10 +6,10 @@ int main() {
 
    insertEnd(5);
    insertStart(23);
-   searchListElement(0);
-   removeElement(0);
+   searchListElement(2);
+   removeElement(1);
 
-   printList();
+   emptyList();
 
    return 0;
 }

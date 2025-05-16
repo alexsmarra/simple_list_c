@@ -18,16 +18,18 @@ void printList() {
 
 void emptyList() {
    size = 0;
-   printf("The list was emptied.\n\n");
+   printf("The list was emptied.\n");
+   printList();
 }
 
 void insertEnd(int value) {
    if(size < LIST_SIZE) {
       list[size] = value;
       size++;
-      printf("The value %d was inserted at the end of the list.\n\n", value);
+      printf("The value %d was inserted at the end of the list.\n", value);
+      printList();
    } else {
-      printf("The list is full.\n\n");
+      printf("The list is full. Cannot insert value %d.\n\n", value);
    }
 } 
 
@@ -38,9 +40,11 @@ void insertStart(int value) {
       }
       list[0] = value;
       size++;
-      printf("The value %d was inserted at the beginning of the list.\n\n", value);
+      printf("The value %d was inserted at the beginning of the list.\n", value);
+      printList();
+
    } else {
-      printf("The list is full.\n\n");
+      printf("The list is full. Cannot insert value %d.\n\n", value);
    }
 }
 
@@ -61,7 +65,8 @@ void removeElement(int pos) {
          list[i] = list[i + 1];
       }
       size--;
-      printf("The value at position %d was removed successfully!\n\n", pos);
+      printf("The value at position %d was removed successfully.\n", pos);
+      printList();
    } else {
       printf("Invalid position.\n\n");
    }
