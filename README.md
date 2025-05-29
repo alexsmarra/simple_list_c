@@ -1,6 +1,6 @@
 # Simple List Project in C
 
-This is a basic C program that simulates list operations like:
+This is a basic C program that simulates operations on a **static unordered list**, including:
 
 - Printing a list  
 - Inserting elements at the start and end  
